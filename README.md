@@ -59,7 +59,7 @@ Scripts usados no MySQL: [`scripts/etl_sql.txt`](./script_SQL/scriptsql.txt)
 
 ---
 
-## 📚 Dicionário de Dados
+## 📚 Dicionário de Dados (resumo)
 Este projeto usa 5 tabelas principais:
 
 - **fVendas**: dados de pedidos, produtos, datas e moeda.
