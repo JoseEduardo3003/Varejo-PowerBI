@@ -1,5 +1,5 @@
 # 🛒 Painel Executivo de Vendas em Varejo - Power BI
-Este dashboard apresenta uma visão abrangente sobre vendas de uma rede de varejo registradas entre 2016 e 2021. A análise inclui produtos, perfomance de lojas, perfil de cliente e uma visão geral das vendas tanto na moeda local quanto num contexto geral, padronizadas em dólar. 
+Projeto de análise de uma rede varejista global, com foco em vendas, desempenho por loja, moedas locais e sazonalidade. Utilizei SQL para tratamento, cálculos e modelagem dos dados, e Power BI para criação de dashboards com visão gerencial e regional.
 
 ---
 
