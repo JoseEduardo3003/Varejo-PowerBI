@@ -1,0 +1,58 @@
+## 📘 Dicionário de Dados
+
+### 🛍️ Tabela: fVendas 
+
+| Campo           | Descrição                                          |
+|-----------------|----------------------------------------------------|
+| id_pedido       | ID único de cada pedido                            |
+| data_pedido     | Data em que o pedido foi realizado                 |
+| id_cliente      | Identificador do cliente                           |
+| id_loja         | Identificador da loja                              |
+| id_produto      | Identificador do produto                           |
+| quantidade      | Quantidade comprada                                |
+| id_moeda        | Código da moeda local                              |
+| preco_usd       | Preço do Produto em dólar (USD)                    |
+| preco_local     | Preço do Produto na moeda local da compra          |
+
+### 🛍️ Tabela: dClientes 
+
+| Campo           | Descrição                                          |
+|-----------------|----------------------------------------------------|
+| id_cliente      | Identificador do cliente                           |
+| genero          | Gênero do cliente                                  |
+| idade           | Idade do cliente                                   |
+| continente      | Continente do cliente                              |
+| pais            | País do cliente                                    |
+| estado          | Estado do cliente                                  |
+| faixa_etaria    | Faixa Etária do cliente                            |
+
+### 🛍️ Tabela: dConversaoMoeda 
+
+| Campo           | Descrição                                          |
+|-----------------|----------------------------------------------------|
+| id_moeda        | Código da moeda local                              |
+| taxa_conversao  | Taxa de câmbio em relação ao dólar americano (USD) |
+
+### 🛍️ Tabela: dLojas 
+
+| Campo           | Descrição                                          |
+|-----------------|----------------------------------------------------|
+| id_loja         | Chave primária para identificar lojas              |
+| pais            | País do loja                                       |
+| estado          | Estado da loja                                     |
+| dimensao_loja   | Dimensão da loja em metros quadrados               |
+| tamanho_loja    | Classificação do tamanho da loja                   |
+| nome_loja       | nome "Loja" + Chave Primária                       |
+
+### 🛍️ Tabela: dProdutos 
+
+| Campo           | Descrição                                          |
+|-----------------|----------------------------------------------------|
+| id_produto      | Chave primária para identificar produtos           |
+| marca           | Marca do produto                                   |
+|custo_produto_USD| Custo de produção do produto em USD                |
+|preco_produto_USD| Preço de venda sugerido do produto em USD          |
+| subclasse       | Subcategoria do Produto                            |
+| classe          | Categoria do Produto                               |
+| nome_produto    | Nome do Produto                                    |
+| margem_lucro    | Margem de lucro por unidade vendida do produto     |
