@@ -50,6 +50,8 @@ O dataset contém cinco planilhas com dados referentes à:
 - ETL para cada arquivo
 - Exportação para formato CSV novamente, já com os dados tratados.
 
+Scripts usados no MySQL: [`scripts/etl_sql.txt`](./script_SQL/scriptsql.txt)
+
 - **Power BI Desktop**
 - Power Query para colunas extras (Linguagem M)
 - Medidas DAX
@@ -66,28 +68,29 @@ Este projeto usa 5 tabelas principais:
 - **dLojas**: localização e tamanho das lojas.
 - **dConversaoMoeda**: taxa de câmbio em relação ao USD.
 
-Para o dicionário completo, veja [aqui](./data_dictionary.md).
+Para o dicionário completo, veja [aqui](./projeto_final/dicionario_varejo.txt).
 
 ---
 
 ## 📷 Preview do Dashboard
-![Dashboard PowerBI](imagens_dashboardpbi/paginainicial_pbi.PNG)
-![Dashboard PowerBI](imagens_dashboardpbi/visaogeral_pbi.PNG)
-![Dashboard PowerBI](imagens_dashboardpbi/vendedores_pbi.PNG)
-![Dashboard PowerBI](imagens_dashboardpbi/produtos_pbi.PNG)
-![Dashboard PowerBI](imagens_dashboardpbi/clientes_pbi.PNG)
+![Dashboard PowerBI](imagens_varejo/paginicial.PNG)
+![Dashboard PowerBI](imagens_varejo/visaogeral.PNG)
+![Dashboard PowerBI](imagens_varejo/lojas.PNG)
+![Dashboard PowerBI](imagens_varejo/produtos.PNG)
+![Dashboard PowerBI](imagens_varejo/clientes.PNG)
+![Dashboard PowerBI](imagens_varejo/moeda.PNG)
 
 ---
 
 ## 🗂️ Arquivo
-[`projeto_CRM.pbix`](./projeto_CRM.pbix)
+[`projeto_varejo.pbix`](./projeto_varejo.pbix)
 
 ---
 
 ## 🎯 Insights Obtidos
-- Ciclo de Fechamento é de **45 dias**, porém existe uma grande parcela (43%) abrangendo um período de até 15 dias.
-- **Junho** foi o mês com mais vendas no ano.
-- Dentre os vendedores, para grandes faturamentos destaca-se **Darcel Schlecht** e para menores **Lajuana Vencill**.
-- Os produtos mais vendidos são da categoria **GTX**, se destacando tanto em volume de vendas quando em receita.
+- Os maiores picos de pedidos realizados foram nos meses de **dezembro em 2019 e 2020**.
+- **Vendas Online** foram o principal pilar de receita disparado, no período analisado.
+- Ainda assim, as lojas de **Grande Porte** foram responsáveis por pouco menos da metade do faturamento.
+- Os produtos mais vendidos são da categoria **Computers**, se destacando tanto em volume de vendas quando em receita.
 - O país que mais comprou foi disparadamente os **Estados Unidos**.
-- Empresas de **médio porte** representaram a maior parte das vendas.
+- Apesar do dólar ser a principal moeda influente na receita, o Euro e a Libra tem muita influência na venda dos produtos mais vendidos.
