@@ -1,0 +1,68 @@
+Código SQL: Tabela Produtos
+ALTER TABLE Products ALTER COLUMN Unit_Cost_USD money;
+Tabela Produto:
+SELECT DISTINCT ProductKey as id_produto,
+Product_Name as nome_produto,
+Brand as marca,
+Unit_Cost_USD as custo_produto_USD,
+Unit_Price_USD as preco_produto_USD,
+Subcategory as subclasse,
+Category as classe
+FROM Products
+
+Tabela Customers
+- Calculando coluna Idade
+SELECT 
+    Name,
+    Birthday,
+    DATEDIFF(YEAR, Birthday, GETDATE()) 
+        - CASE 
+            WHEN MONTH(Birthday) > MONTH(GETDATE()) 
+              OR (MONTH(Birthday) = MONTH(GETDATE()) AND DAY(Birthday) > DAY(GETDATE()))
+            THEN 1 
+            ELSE 0 
+          END AS Idade
+FROM Customers;
+- ALTER TABLE SuaTabela
+ADD Idade INT;
+- UPDATE SuaTabela
+SET Idade = DATEDIFF(YEAR, DataNascimento, GETDATE()) 
+            - CASE 
+                WHEN MONTH(DataNascimento) > MONTH(GETDATE()) 
+                  OR (MONTH(DataNascimento) = MONTH(GETDATE()) AND DAY(DataNascimento) > DAY(GETDATE()))
+                THEN 1 
+                ELSE 0 
+              END;
+
+SELECT DISTINCT CustomerKey AS id_cliente,
+Gender as genero,
+Idade as idade,
+Continent as continente,
+Country as pais,
+State as estado
+FROM Customers
+
+Tabela Stores: SELECT StoreKey AS id_loja,
+Country AS pais,
+State AS estado,
+Square_Meters AS tamanho_loja
+FROM Stores
+
+Tabela Exchange_Rates:
+SELECT Currency AS id_moeda,
+AVG(Exchange) AS taxa_conversao
+FROM Exchange_Rates
+GROUP BY Currency;
+Foco nas vendas
+
+Tabela Sales:
+SELECT Order_Number AS id_pedido,
+Sales.Order_Date AS data_pedido,
+Sales.CustomerKey AS id_cliente,
+Sales.StoreKey AS id_loja,
+Sales.ProductKey AS id_produto,
+Sales.Quantity AS quantidade,
+Sales.Currency_Code AS id_moeda,
+(Quantity * Products.Unit_Price_USD) AS custo_total
+FROM Sales
+LEFT JOIN Products ON Sales.ProductKey = Products.ProductKey;
